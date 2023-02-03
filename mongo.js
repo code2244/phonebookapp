@@ -43,6 +43,7 @@ else if (process.argv.length === 5) {
 		number: process.argv[4]
 	})
 
+	// eslint-disable-next-line no-unused-vars
 	person.save().then(response => {
 		console.log(`Added "${process.argv[3]}" with number "${process.argv[4]}" to phonebook`)
 		mongoose.connection.close()
