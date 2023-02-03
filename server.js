@@ -12,15 +12,16 @@ const requestLogger = (request, response, next) => {
 	next()
 }
 
+// eslint-disable-next-line no-unused-vars
 const unknownEndPoint = (request, response) => {
 	response.status(404).send({ error: 'unknown endpoint' })
 }
 
 // Middleware
-app.use(cors())
 app.use(express.json())
 app.use(requestLogger)
 app.use(express.static('build'))
+app.use(cors())
 
 // GET return list of persons
 app.get('/api/persons', (req, res, next) => {
@@ -118,6 +119,7 @@ app.use(errorHandler)
 
 // Server info
 const PORT = process.env.PORT
+
 app.listen(PORT, () => {
 	console.log(`Server running on port ${PORT}`)
 })
