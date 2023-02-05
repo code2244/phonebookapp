@@ -7,7 +7,7 @@ Simple phonebook.
 
 **Tech used:** React, Node.js, Express, MongoDB
 
-Applications created for the Full Stack Open course.
+Simple phonebook to store contacts with name and telephone number.
 
 
 ## Optimizations
